@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'app/libs'
+        }
+    }
+}
+
+//buildscript {
+//    dependencies {
+//        classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
+//    }
+//}
+//apply plugin: 'io.github.gradle-nexus.publish-plugin'
+
+
+rootProject.name = "My Application"
+include ':app'
+include ':mylibrary'
